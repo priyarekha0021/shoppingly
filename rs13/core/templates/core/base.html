@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <>
+        
+        <title> {% block title %} other {% endblock title %}</title>
+        {% block corecss %}
+        <link rel ="stylesheet" href="{% static 'core/css/core.css' %}">
+        {% endblock corecss %}
+    
+    <body>
+        <nav>
+            <ol>
+            <li><a href="/">home</a></li>
+            <li><a href="/about">about</a></li>
+            <li><a href="{% url 'aboutus' %}">about</a></li>
+            
+            <li><a href="/cor/django">Django</a></li>
+            </ol>
+        </nav>
+        {% block content %} {% endblock content %}
+        
+    </body>
+</html>

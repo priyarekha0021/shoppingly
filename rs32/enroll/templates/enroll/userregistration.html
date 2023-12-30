@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> user registration
+
+        </title>
+        <style>
+            .errorlist{
+                list-style-type:none;
+                color:red;
+                font-size:10px;
+            } </style>
+    </head>
+    <body>
+      
+            <form action=""method="POST" novalidate>
+                {% csrf_token %}
+                {{form.non_field_error}}
+                {% for field in form %}
+                <div>
+                    <span class = "errorlist">{{field.errors|striptags}}</span>{{field.label_tag}}{{field}}
+                </div>
+                {% endfor %}
+                <input type="submit" value="submit">
+            </form>
+      
+    </body>
+</html>

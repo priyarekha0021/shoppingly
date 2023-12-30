@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+Document
+        </title> 
+        <style>
+            th, td { border: 1px black solid; }
+           </style>
+       </head>
+       <body>
+        <h1>student page</h1>
+        {% if stu %}
+        <h2>show data</h2>
+        {{stu}}
+        <table>
+            <tr>
+              <th>ID</th>
+              <th>StuID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Password</th>
+            </tr>
+           {% for st in stu %}
+            <tr>
+              <td>{{st.id}}</td>
+              <td>{{st.stuid}}</td>
+              <td>{{st.stuname}}</td>
+              <td>{{st.stuemail}}</td>
+              <td>{{st.stupass}}</td>
+            </tr>
+           {% endfor %}
+          </table>
+        {% else %}
+        <h2>no data</h2>
+        {% endif %}
+    
+    </body>
+</html>

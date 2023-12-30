@@ -1,0 +1,21 @@
+ {% extends "core/base.html" %}
+ {% load static %}
+ {% block content%} 
+ <div class=" mt-3 ">
+<div class="text-center">
+    <img src=" {% static 'core/images/professionl.jpg' %}"alt="profilepic"class="img-thumbnail " heght="100px" width="100px">
+</div>
+
+    <div class=" mt-3 text-white mx-3 text-justify">
+        <h2 class ="font-weight-bold ">Hello</h2>
+        <div class="px-3" style="font-size:0.95rem">
+            <p style="text-indent:50px;">{% lorem 30 w %}
+        </div>
+    </div>
+    <div  class="text-center">
+   
+        <a href=""class=" btn btn-danger my-3 mr-5">Hire Me</a>
+        <a href=""class=" btn btn-danger my-5">Contact</a>
+    </div>
+ </div>
+ {% endblock content%}

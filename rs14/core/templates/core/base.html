@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <>
+        
+        <title> {% block title %} other {% endblock title %}</title>
+        {% block corecss %}
+        <link rel ="stylesheet" href="{% static 'core/css/core.css' %}">
+        {% endblock corecss %}
+    
+    <body>
+        {% include "core/nav.html" %}
+        {% block content %} {% endblock content %}
+        
+    </body>
+</html>
